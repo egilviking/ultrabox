@@ -140,7 +140,7 @@ Du behöver inkludera LESS CSS Kompilator och css fil i head på din site.
 ```
 Det är viktigt att alla filer ifrån UltraBox++ finns i ditt projekt.<br>
 På min referenssida så har jag lagt följande kod i vardera div boxar, detta är för att strukturera upp sidan.
-Inkludera följande om så önskas.
+Inkludera följande om så önskas.<br>
 <strong>Drag N Drop</strong>
 ```	
 <div id='dragndrop'>
@@ -193,36 +193,39 @@ Inkludera följande om så önskas.
 	</div>
 </div> 
 ```	
+Förklaring
+----------------------
+Det är viktigt att id namnet på dessa element ej ändras. Det är jquery som selectar dessa div element och de behövs för att visa grejerna.
 
 Under utveckling
 =======================
 Buggar
 -----------------------
 Kända buggar hittills är:<br>
-<strong>Uppladdning bilder</strong>
+<strong>Uppladdning bilder</strong><br>
 Vid förhandsvisning av bildr så laddas bilder upp till katalogen uploads/ på servern.
 Om man vid detta stadie stänger ner sidan, så går ej proccessen vidare och ingen information om bilden hamnar i databasen.
 
-<strong>Galleri</strong>
+<strong>Galleri</strong><br>
 Caption vid full storlek kan ibland visas felaktigt vid stora bilder.
 
 
 TO DO's
 -----------------------
-<strong>Caption</strong>
+<strong>Caption</strong><br>
 * Fräscha upp css, ändra till id istället för klass.
 
-<strong>Existerande bilder</strong>
+<strong>Existerande bilder</strong><br>
 * Sortera efter id, ej efter namn. Det gör att de nyaste hamnar först.
 
-<strong>Slideshow</strong>
+<strong>Slideshow</strong><br>
 *Automatisk uppdatering när nya bilder läggs till
 *Automatisk storleks anpassning av bilder, stora som små.
 
-<strong>Galleriet</strong>
+<strong>Galleriet</strong><br>
 *Jämnare storleksanpassning, ser snyggare ut.
 *Caption animeringen kan ibland lagga.
 
-<strong>Misc</strong>
+<strong>Misc</strong><br>
 *Loading image är ej transparent
 Skilda Formulär ID's för styling.
