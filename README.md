@@ -19,12 +19,12 @@ Navigera till din ultrabox katalog och ladda upp denna till din utvecklingsserve
 Ge katalog `uploads/` filrättigheter till 777.
 
 Navigera till filen `proccessimages.php`, rad <strong> 3 </strong> till <strong> 5 </strong> är intressant.
-`<pre>
+<pre><code>
 $dsn 	  = ''  //SERVER
 $login 	  = ''	//Användarnamn
 $password = ''	//Lösenord
-</pre>
-`
+</pre></code>
+
 Fyll här i din egen databas information, spara sedan filen och ladda upp till din utvecklingsserver.
 
 Referensinstallation
