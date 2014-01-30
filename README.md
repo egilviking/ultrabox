@@ -34,6 +34,7 @@ Om felmeddelande `Could not connect to database, hiding connection details.` vis
 Gör om föregående instruktion för att få din databas att fungera.
 
 Sådär, din UltraBox referens hemsida ska vara uppe och visas !
+Passa på att läsa kända buggar längst ner i denna readme innan du kör igång !
 
 Användning
 =============
@@ -219,13 +220,13 @@ TO DO's
 * Sortera efter id, ej efter namn. Det gör att de nyaste hamnar först.
 
 <strong>Slideshow</strong><br>
-*Automatisk uppdatering när nya bilder läggs till
-*Automatisk storleks anpassning av bilder, stora som små.
+* Automatisk uppdatering när nya bilder läggs till
+* Automatisk storleks anpassning av bilder, stora som små.
 
 <strong>Galleriet</strong><br>
-*Jämnare storleksanpassning, ser snyggare ut.
-*Caption animeringen kan ibland lagga.
+* Jämnare storleksanpassning, ser snyggare ut.
+* Caption animeringen kan ibland lagga.
 
 <strong>Misc</strong><br>
-*Loading image är ej transparent
-Skilda Formulär ID's för styling.
+* Loading image är ej transparent
+* Skilda Formulär ID's för styling.
