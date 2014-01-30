@@ -48,16 +48,16 @@ Om du inte vet, men ändå vill freestyla så kommer en förklaring senare.
 Rad <strong>23</strong>.<br>
 Här kan du ändra höjd och storlek på bilderna som visas som thumbnails i preview och existing images.
 
-<code>	
+```
 // Size of thumbnails in preview and existing images.
 $width = 80;
 $height = 80;
-</code>
+```
 <br><br>
 <b>main.js</b><br>
 Rad <strong>12</strong>.<br>
 Här går det att ställa in tidsinställningar för olika animeringar. 1000 är 1 sekund.
-<code>	
+```	
 // Id of your drag n drop div. IMPORTANT
 var $dnd = $("#dragndrop");	
 
@@ -78,7 +78,7 @@ var $htmlfade = 1500;
 // Forms
 var $formfade = 2500;
 var $submitfade = 1000;
-</code>
+```
 <br><br>
 <b>Caption - style.less</b><br>
 Rad <strong>21</strong>.<br>
