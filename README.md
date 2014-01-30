@@ -19,18 +19,18 @@ Navigera till din ultrabox katalog och ladda upp denna till din utvecklingsserve
 Ge katalog `uploads/` filrättigheter till 777.
 
 Navigera till filen `proccessimages.php`, rad <strong> 3 </strong> till <strong> 5 </strong> är intressant.
-<pre><code>
-$dsn 	  = ''  //SERVER
-$login 	  = ''	//Användarnamn
+<code>	
+$dsn 			= ''  //SERVER
+$login 		= ''	//Användarnamn
 $password = ''	//Lösenord
-</pre></code>
-
+</code>
+<br>
 Fyll här i din egen databas information, spara sedan filen och ladda upp till din utvecklingsserver.
 
 Referensinstallation
 --------------------
 Peka nu din webbläsare mot din utvecklingsserver för att prova referensinstallationen.
-Om felmeddelande `'Could not connect to database, hiding connection details.` visas upp. <br>
+Om felmeddelande `Could not connect to database, hiding connection details.` visas upp. <br>
 Gör om föregående instruktion för att få din databas att fungera.
 
 Sådär, din UltraBox referens hemsida ska vara uppe och visas !
@@ -48,10 +48,16 @@ Om du inte vet, men ändå vill freestyla så kommer en förklaring senare.
 Rad <strong>23</strong>.<br>
 Här kan du ändra höjd och storlek på bilderna som visas som thumbnails i preview och existing images.
 
+<code>	
+// Size of thumbnails in preview and existing images.
+$width = 80;
+$height = 80;
+</code>
+<br><br>
 <b>main.js</b><br>
 Rad <strong>12</strong>.<br>
 Här går det att ställa in tidsinställningar för olika animeringar. 1000 är 1 sekund.
-`
+<code>	
 // Id of your drag n drop div. IMPORTANT
 var $dnd = $("#dragndrop");	
 
@@ -72,11 +78,12 @@ var $htmlfade = 1500;
 // Forms
 var $formfade = 2500;
 var $submitfade = 1000;
-`
+</code>
+<br><br>
 <b>Caption - style.less</b><br>
 Rad <strong>21</strong>.<br>
 Caption är titel och text som visas i galleriet när man hovrar eller har klickat på en vald bild. Om det är en vald bild så visas caption tillsammans med lightbox effekten.
-`
+<code>	
 /* --------------------- Caption --------------------------*/
 @caption-padding: 10px;
 @caption-margin: 5px 0 0 0;
@@ -87,12 +94,12 @@ Caption är titel och text som visas i galleriet när man hovrar eller har klick
 @caption-desc-color: #FFF; 	/*Text color*/
 @caption-title-size: 16px;	/*Title size*/
 @caption-desc-size: 13px; 	/*Text size*/
-`
-
+</code>
+<br><br>
 <b>Galleri - style.less</b><br>
 Rad <strong>32</strong>.<br>
 Här går det att styla galleriets utseende. Stora bilder kommer automatiskt förminskas ifall de är större än galleriet.
-`
+<code>	
 /* --------------------- Gallery --------------------------*/ 
 @gallery-padding: 10px;
 @gallery-width: 700px;
@@ -101,12 +108,13 @@ Här går det att styla galleriets utseende. Stora bilder kommer automatiskt fö
 @gallery-small-image-size: 40px; // Detta är storleken för thumbnailsen i nedre delen av galleriet.
 @gallery-border: 1px solid #fff;
 @gallery-current-img-border: 1px solid #eee;
-`
+</code>
 
+<br><br>
 <b>Slideshow - style.less</b><br>
 Rad <strong>41</strong>.<br>
 Här går det att styla slideshowens utseende. Bilder oavsett höjd och bredd kommer anpassa sig till slideshowens storlek.
-`
+<code>	
 /* --------------------- Slideshow --------------------------*/ 
 @slideshow-width: 700px;
 @slideshow-height: 150px;
@@ -115,7 +123,8 @@ Här går det att styla slideshowens utseende. Bilder oavsett höjd och bredd ko
 @slideshow-margin: 0 auto 30px;
 @slideshow-padding: 0;
 @slideshow-border: 1px solid #fff;
-`
+</code>
+<br><br>
 Editering och anpassning
 ------------------------
 Grundtanken med UltraBox är att det ska vara anpassningsbart och de olika funktionerna ska vara oberoende av varandra.
@@ -124,34 +133,40 @@ Det ger möjlighet till att editera i stort sett hela UltraBox till utseende och
 
 För att inkludera UltraBox++ i ditt projekt gör följande. Utgår ifrån att det är samma katalogstruktur på ditt projekt som det är här.
 Du behöver inkludera LESS CSS Kompilator och css fil i head på din site.
-`<link rel="stylesheet/less" type="text/css" href="css/style.less">
+<code>
+<link rel="stylesheet/less" type="text/css" href="css/style.less">
 <script src="js/less.min.js"></script>`
-
+</code>
 Längst ner i body kan du inkludera dessa filer.
+<code>	
 <script src="js/jquery.js"></script>
 <script src="js/main.js"></script>
-
+</code>	
 Det är viktigt att alla filer ifrån UltraBox++ finns i ditt projekt.
 
 På min referenssida så har jag lagt följande kod i vardera div boxar, detta är för att strukturera upp sidan.
 Inkludera följande om så önskas.
 <strong>Drag N Drop</strong>
-`	
+<code>	
 <div id='dragndrop'>
 	<h2>Upload images</h2>
 	<!--Drag N Drop content here -->
 	<h2>Drag and drop files.</h2>
 </div>
-`
+</code>	
+
 <strong>Manuellt uppladdningsformulär</strong>
-`
+
+<code>	
 <form name="uploadPreview" enctype="multipart/form-data">
 	<input type="file" name="file[]" multiple="true"/><br>
 	<input type='submit' value='Upload and Preview'/>
 </form>
-`
+</code>	
+
 <strong>Förhandsvisning av nya bilder</strong>
-`
+
+<code>	
 <h2>Preview images</h2>
 <img class='spinnernewimages'/>
 <div id='newimages'>
@@ -161,18 +176,25 @@ Inkludera följande om så önskas.
 	<!-- New uploaded images shows here -->
 	</form>
 </div>
-`	
+	
+</code>	
 <strong>Existerande bilder</strong>
-`
+
+<code>	
 <h2>Existing images</h2>
 <div id='images'><!-- Stored images shows here --></div>
-`
+</code>	
+
 <strong>Slideshow</strong>
-`<h2>Slideshow</h2>
-			<div id='slideshow'><!-- Slideshow shows here --></div>
-`
+
+<code>
+	<h2>Slideshow</h2>
+	<div id='slideshow'><!-- Slideshow shows here --></div>
+</code>	
+
 <strong>Gallery</strong>
-`
+
+<code>	
 <h2>Gallery</h2>	
 <div id='gallery'>
 	<div class='gallery-current'>
@@ -184,12 +206,13 @@ Inkludera följande om så önskas.
 			<!-- Gallery here -->
 	</div>
 </div> 
-`
+</code>	
+
 
 Under utveckling
-======================
+=======================
 Buggar
-----------------------
+-----------------------
 Kända buggar hittills är:<br>
 <strong>Uppladdning bilder</strong>
 Vid förhandsvisning av bildr så laddas bilder upp till katalogen uploads/ på servern.
@@ -200,7 +223,7 @@ Caption vid full storlek kan ibland visas felaktigt vid stora bilder.
 
 
 TO DO's
-----------------------
+-----------------------
 <strong>Caption</strong>
 * Fräscha upp css, ändra till id istället för klass.
 
